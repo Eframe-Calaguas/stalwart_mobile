@@ -4,7 +4,6 @@ import 'package:flutter/widgets.dart';
 import './widgets/dashboard.dart';
 import './widgets/login.dart';
 import './widgets/navigations.dart';
-import './widgets/search_bar.dart';
 import './widgets/cash_advanced_list.dart';
 
 void main() {
@@ -25,9 +24,7 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // bottomNavigationBar: SearchBar(),
-      // body: LoginPage(),
-      body: CashAdvancedPage(),
+      body: LoginPage(),
     );
   }
 }
@@ -113,14 +110,11 @@ class CashAdvancedPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Column(
-      children: [
-        SearchBar(),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [Text('Cash Advanced')],
-        )
-      ],
-    ));
+      body: Column(
+        children: [
+          CashAdvancedList(),
+        ],
+      ),
+    );
   }
 }

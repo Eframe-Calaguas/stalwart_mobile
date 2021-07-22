@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../main.dart';
+
 class Navigations extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -113,6 +115,12 @@ class Navigations extends StatelessWidget {
               splashColor: Colors.blue.withAlpha(30),
               onTap: () {
                 print('Cash Advanced');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => CashAdvancedPage(),
+                  ),
+                );
               },
               child: Column(
                 children: [
