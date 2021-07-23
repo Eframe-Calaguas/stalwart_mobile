@@ -39,9 +39,9 @@ class Dashboard extends StatelessWidget {
                   CircleAvatar(
                     radius: 70,
                     backgroundColor: Colors.white,
-                    child: const Text(
-                      'EC',
-                      style: TextStyle(fontSize: 50),
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage('assets/face.png'),
+                      radius: 70,
                     ),
                   )
                 ],
