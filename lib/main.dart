@@ -109,12 +109,6 @@ class HomePage extends StatelessWidget {
 class CashAdvancedPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          CashAdvancedList(),
-        ],
-      ),
-    );
+    return CashAdvancedList();
   }
 }
