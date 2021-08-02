@@ -1,21 +1,20 @@
 import 'dart:convert';
-import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
 
 import 'package:http/http.dart' as http;
 
 import './loading_screen.dart';
-import './cash_advanced_particular.dart';
 
-class CashAdvancedList extends StatefulWidget {
+class Reimbursement extends StatefulWidget {
   @override
-  _CashAdvancedListState createState() => _CashAdvancedListState();
+  _Reimbursement createState() => _Reimbursement();
 }
 
-class _CashAdvancedListState extends State<CashAdvancedList> {
+class _Reimbursement extends State<Reimbursement> {
   List users = [];
 
   @override
@@ -47,7 +46,7 @@ class _CashAdvancedListState extends State<CashAdvancedList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Cash Advanced'),
+        title: Text('Reimbursement'),
       ),
       body: getBody(),
     );
@@ -97,12 +96,7 @@ class _CashAdvancedListState extends State<CashAdvancedList> {
         ),
         child: InkWell(
           splashColor: Colors.blue,
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => CashAdvancedParticular()),
-            );
-          },
+          onTap: () {},
           child: Padding(
             padding: const EdgeInsets.only(top: 20, bottom: 20),
             child: ListTile(
