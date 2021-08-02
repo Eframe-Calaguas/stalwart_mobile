@@ -8,6 +8,7 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:http/http.dart' as http;
 
 import './loading_screen.dart';
+import './liquidation_particular.dart';
 
 class Liquidation extends StatefulWidget {
   @override
@@ -96,7 +97,15 @@ class _Liquidation extends State<Liquidation> {
         ),
         child: InkWell(
           splashColor: Colors.blue,
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => LiquidationParticular(
+                    userImage, fullName, amountFiled, dateString),
+              ),
+            );
+          },
           child: Padding(
             padding: const EdgeInsets.only(top: 20, bottom: 20),
             child: ListTile(
@@ -136,7 +145,7 @@ class _Liquidation extends State<Liquidation> {
                       Text(
                         dateString,
                         style: TextStyle(
-                          color: Colors.blue,
+                          color: Color(0xFF515265),
                           fontSize: 13,
                         ),
                       ),

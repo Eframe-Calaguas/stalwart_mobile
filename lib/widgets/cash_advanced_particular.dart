@@ -4,6 +4,11 @@ import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 
 class CashAdvancedParticular extends StatelessWidget {
+  final userImage;
+  final fullName;
+  final amountFiled;
+
+  CashAdvancedParticular(this.userImage, this.fullName, this.amountFiled);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,8 +30,8 @@ class CashAdvancedParticular extends StatelessWidget {
                   color: Colors.blue,
                   borderRadius: BorderRadius.circular(150 / 2),
                   image: DecorationImage(
-                    image: AssetImage(
-                      ('assets/man_face.jpg'),
+                    image: NetworkImage(
+                      userImage,
                     ),
                     fit: BoxFit.cover,
                   ),
@@ -39,7 +44,7 @@ class CashAdvancedParticular extends StatelessWidget {
             Column(
               children: [
                 Text(
-                  'Eframe Calaguas',
+                  fullName,
                   style: TextStyle(
                     color: Colors.blue,
                     fontSize: 22,
@@ -73,9 +78,9 @@ class CashAdvancedParticular extends StatelessWidget {
                     children: [
                       Flexible(
                         child: Text(
-                          'Mobile Application',
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Color(0xFF515265),
                             fontSize: 18,
                           ),
                         ),
@@ -111,9 +116,9 @@ class CashAdvancedParticular extends StatelessWidget {
                     children: [
                       Flexible(
                         child: Text(
-                          'Mobile Application and Website Development Training',
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Color(0xFF515265),
                             fontSize: 18,
                           ),
                         ),
@@ -149,9 +154,11 @@ class CashAdvancedParticular extends StatelessWidget {
                     children: [
                       Flexible(
                         child: Text(
-                          'PHP 8,000',
+                          amountFiled.toString().replaceAllMapped(
+                              new RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
+                              (Match m) => "${m[1]},"),
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Color(0xFF515265),
                             fontSize: 18,
                           ),
                         ),

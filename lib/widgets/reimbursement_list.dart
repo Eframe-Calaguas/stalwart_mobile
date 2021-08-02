@@ -8,6 +8,7 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:http/http.dart' as http;
 
 import './loading_screen.dart';
+import './reimbursement_particular.dart';
 
 class Reimbursement extends StatefulWidget {
   @override
@@ -96,7 +97,15 @@ class _Reimbursement extends State<Reimbursement> {
         ),
         child: InkWell(
           splashColor: Colors.blue,
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ReimbursementParticular(
+                    userImage, fullName, amountFiled, dateString),
+              ),
+            );
+          },
           child: Padding(
             padding: const EdgeInsets.only(top: 20, bottom: 20),
             child: ListTile(
