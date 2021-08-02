@@ -87,6 +87,7 @@ class _CashAdvancedListState extends State<CashAdvancedList> {
     var amountFiled = item['location']['street']['number'];
     var userImage = item['picture']['large'];
     var dateString = DateFormat.yMMMMd().format(DateTime.parse(dateFiled));
+    var dataApi = [fullName, dateFiled, amountFiled, userImage, dateString];
 
     return Container(
       padding: EdgeInsets.all(2),
@@ -100,7 +101,10 @@ class _CashAdvancedListState extends State<CashAdvancedList> {
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => CashAdvancedParticular()),
+              MaterialPageRoute(
+                builder: (context) =>
+                    CashAdvancedParticular(userImage, fullName, amountFiled),
+              ),
             );
           },
           child: Padding(
@@ -142,7 +146,7 @@ class _CashAdvancedListState extends State<CashAdvancedList> {
                       Text(
                         dateString,
                         style: TextStyle(
-                          color: Colors.blue,
+                          color: Color(0xFF515265),
                           fontSize: 13,
                         ),
                       ),
