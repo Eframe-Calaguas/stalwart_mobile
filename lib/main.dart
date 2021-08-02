@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:stalwart_mobile/widgets/reimbursement_list.dart';
 
 import './widgets/dashboard.dart';
 import './widgets/login.dart';
 import './widgets/navigations.dart';
 import './widgets/cash_advanced_list.dart';
+import './widgets/liquidation_list.dart';
 
 void main() {
   runApp(MyApp());
@@ -33,7 +35,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xFFF1F1F1),
       appBar: AppBar(
         backgroundColor: Colors.blue,
         elevation: 0.0,
@@ -86,7 +88,7 @@ class HomePage extends StatelessWidget {
         ],
       ),
       bottomSheet: Container(
-        height: 90,
+        height: 85,
         width: double.infinity,
         decoration: BoxDecoration(
           image: DecorationImage(
@@ -110,5 +112,19 @@ class CashAdvancedPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CashAdvancedList();
+  }
+}
+
+class LiquidationPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Liquidation();
+  }
+}
+
+class ReimbursementPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Reimbursement();
   }
 }

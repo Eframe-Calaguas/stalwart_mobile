@@ -11,26 +11,28 @@ class Dashboard extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 40, 20, 7),
-                  child: Text(
-                    'Eframe Calaguas',
-                    style: TextStyle(
-                        fontSize: 28.0,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white),
+            Container(
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 40, 20, 7),
+                    child: Text(
+                      'Eframe Calaguas',
+                      style: TextStyle(
+                          fontSize: 28.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                    ),
                   ),
-                ),
-                Padding(
-                  padding: EdgeInsets.zero,
-                  child: Text(
-                    'System Developer',
-                    style: TextStyle(fontSize: 20.0, color: Colors.white),
+                  Padding(
+                    padding: EdgeInsets.zero,
+                    child: Text(
+                      'System Developer',
+                      style: TextStyle(fontSize: 20.0, color: Colors.white),
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             Container(
               margin: EdgeInsets.only(right: 20),
