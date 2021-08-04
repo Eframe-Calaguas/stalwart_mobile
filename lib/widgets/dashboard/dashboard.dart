@@ -8,6 +8,7 @@ class Dashboard extends StatelessWidget {
       width: double.infinity,
       color: Colors.blue,
       child: Container(
+        width: MediaQuery.of(context).size.width,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

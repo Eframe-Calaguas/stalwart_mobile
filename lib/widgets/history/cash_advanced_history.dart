@@ -1,21 +1,19 @@
 import 'dart:convert';
+import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-import 'package:flutter_slidable/flutter_slidable.dart';
 
+import '../loading_screen.dart';
 import 'package:http/http.dart' as http;
 
-import './loading_screen.dart';
-import './liquidation_particular.dart';
-
-class Liquidation extends StatefulWidget {
+class CashAdvancedHistory extends StatefulWidget {
   @override
-  _Liquidation createState() => _Liquidation();
+  State<CashAdvancedHistory> createState() => _CashAdvancedHistoryState();
 }
 
-class _Liquidation extends State<Liquidation> {
+class _CashAdvancedHistoryState extends State<CashAdvancedHistory> {
   List users = [];
 
   @override
@@ -46,10 +44,9 @@ class _Liquidation extends State<Liquidation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Liquidation'),
+      body: Container(
+        child: getBody(),
       ),
-      body: getBody(),
     );
   }
 
@@ -97,15 +94,7 @@ class _Liquidation extends State<Liquidation> {
         ),
         child: InkWell(
           splashColor: Colors.blue,
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => LiquidationParticular(
-                    userImage, fullName, amountFiled, dateString),
-              ),
-            );
-          },
+          onTap: () {},
           child: Padding(
             padding: const EdgeInsets.only(top: 20, bottom: 20),
             child: ListTile(
