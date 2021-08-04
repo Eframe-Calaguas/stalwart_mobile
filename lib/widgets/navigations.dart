@@ -252,7 +252,12 @@ class Navigations extends StatelessWidget {
             child: InkWell(
               splashColor: Colors.blue.withAlpha(30),
               onTap: () {
-                print('History');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HistoryPage(),
+                  ),
+                );
               },
               child: Column(
                 children: [

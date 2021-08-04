@@ -8,7 +8,7 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:http/http.dart' as http;
 
 import './loading_screen.dart';
-import './reimbursement_particular.dart';
+import './reimbursement_receipt.dart';
 
 class Reimbursement extends StatefulWidget {
   @override
@@ -101,7 +101,7 @@ class _Reimbursement extends State<Reimbursement> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => ReimbursementParticular(
+                builder: (context) => ReimbursementReceipt(
                     userImage, fullName, amountFiled, dateString),
               ),
             );
