@@ -7,6 +7,7 @@ import './widgets/login.dart';
 import './widgets/navigations.dart';
 import './widgets/cash_advanced_list.dart';
 import './widgets/liquidation_list.dart';
+import './widgets/history.dart';
 
 void main() {
   runApp(MyApp());
@@ -126,5 +127,12 @@ class ReimbursementPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Reimbursement();
+  }
+}
+
+class HistoryPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return History();
   }
 }
