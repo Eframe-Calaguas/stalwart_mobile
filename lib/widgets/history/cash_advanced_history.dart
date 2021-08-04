@@ -5,17 +5,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 
+import '../loading_screen.dart';
 import 'package:http/http.dart' as http;
 
-import '../loading_screen.dart';
-import './cash_advanced_particular.dart';
-
-class CashAdvancedList extends StatefulWidget {
+class CashAdvancedHistory extends StatefulWidget {
   @override
-  _CashAdvancedListState createState() => _CashAdvancedListState();
+  State<CashAdvancedHistory> createState() => _CashAdvancedHistoryState();
 }
 
-class _CashAdvancedListState extends State<CashAdvancedList> {
+class _CashAdvancedHistoryState extends State<CashAdvancedHistory> {
   List users = [];
 
   @override
@@ -46,9 +44,6 @@ class _CashAdvancedListState extends State<CashAdvancedList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Cash Advanced'),
-      ),
       body: Container(
         child: getBody(),
       ),
@@ -99,15 +94,7 @@ class _CashAdvancedListState extends State<CashAdvancedList> {
         ),
         child: InkWell(
           splashColor: Colors.blue,
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) =>
-                    CashAdvancedParticular(userImage, fullName, amountFiled),
-              ),
-            );
-          },
+          onTap: () {},
           child: Padding(
             padding: const EdgeInsets.only(top: 20, bottom: 20),
             child: ListTile(

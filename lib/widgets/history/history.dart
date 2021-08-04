@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'cash_advanced_history.dart';
+import 'liquidation_history.dart';
+import 'reimbursement_history.dart';
+
 class History extends StatefulWidget {
   @override
   State<History> createState() => _HistoryState();
@@ -13,7 +17,8 @@ class _HistoryState extends State<History> {
     return Scaffold(
       appBar: AppBar(),
       body: Container(
-        width: MediaQuery.of(context).size.width,
+          // width: MediaQuery.of(context).size.width,
+          child: SingleChildScrollView(
         child: Column(
           children: [
             SizedBox(
@@ -117,15 +122,41 @@ class _HistoryState extends State<History> {
             ),
             Column(
               children: [
-                SizedBox(
-                  height: 15,
-                ),
-                Text('insert the list here'),
+                if (selectedValue == 'Select')
+                  Column(
+                    children: [
+                      SizedBox(
+                        height: 150,
+                      ),
+                      Text(
+                        'Please choose to show the history',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.blue,
+                        ),
+                      ),
+                    ],
+                  ),
+                if (selectedValue == 'Cash Advanced')
+                  Container(
+                    height: 520,
+                    child: CashAdvancedHistory(),
+                  ),
+                if (selectedValue == 'Liquidation')
+                  Container(
+                    height: 520,
+                    child: LiquidationHistory(),
+                  ),
+                if (selectedValue == 'Reimbursement')
+                  Container(
+                    height: 520,
+                    child: ReimbursementHistory(),
+                  ),
               ],
             )
           ],
         ),
-      ),
+      )),
     );
   }
 }
