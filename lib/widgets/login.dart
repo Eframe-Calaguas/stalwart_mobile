@@ -18,7 +18,7 @@ class LoginPage extends StatelessWidget {
           children: [
             Container(
               height: 450,
-              width: double.infinity,
+              width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/stalwart_logo_login.png'),
@@ -48,6 +48,7 @@ class LoginPage extends StatelessWidget {
             ),
             Column(children: [
               Container(
+                width: MediaQuery.of(context).size.width,
                 child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
                   child: TextFormField(

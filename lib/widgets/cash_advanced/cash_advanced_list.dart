@@ -1,21 +1,21 @@
 import 'dart:convert';
+import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-import 'package:flutter_slidable/flutter_slidable.dart';
 
 import 'package:http/http.dart' as http;
 
-import './loading_screen.dart';
-import './reimbursement_receipt.dart';
+import '../loading_screen.dart';
+import './cash_advanced_particular.dart';
 
-class Reimbursement extends StatefulWidget {
+class CashAdvancedList extends StatefulWidget {
   @override
-  _Reimbursement createState() => _Reimbursement();
+  _CashAdvancedListState createState() => _CashAdvancedListState();
 }
 
-class _Reimbursement extends State<Reimbursement> {
+class _CashAdvancedListState extends State<CashAdvancedList> {
   List users = [];
 
   @override
@@ -47,9 +47,12 @@ class _Reimbursement extends State<Reimbursement> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Reimbursement'),
+        title: Text('Cash Advanced'),
       ),
-      body: getBody(),
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        child: getBody(),
+      ),
     );
   }
 
@@ -101,8 +104,8 @@ class _Reimbursement extends State<Reimbursement> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => ReimbursementReceipt(
-                    userImage, fullName, amountFiled, dateString),
+                builder: (context) =>
+                    CashAdvancedParticular(userImage, fullName, amountFiled),
               ),
             );
           },
@@ -145,7 +148,7 @@ class _Reimbursement extends State<Reimbursement> {
                       Text(
                         dateString,
                         style: TextStyle(
-                          color: Colors.blue,
+                          color: Color(0xFF515265),
                           fontSize: 13,
                         ),
                       ),

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:stalwart_mobile/widgets/reimbursement_list.dart';
 
-import './widgets/dashboard.dart';
 import './widgets/login.dart';
-import './widgets/navigations.dart';
-import './widgets/cash_advanced_list.dart';
-import './widgets/liquidation_list.dart';
-import './widgets/history.dart';
+import './widgets/history/history.dart';
+import './widgets/reimbursement/reimbursement_list.dart';
+import './widgets/cash_advanced/cash_advanced_list.dart';
+import './widgets/liquidation/liquidation_list.dart';
+import './widgets/dashboard/dashboard.dart';
+import './widgets/dashboard/navigations.dart';
 
 void main() {
   runApp(MyApp());

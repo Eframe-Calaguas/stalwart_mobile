@@ -1,21 +1,21 @@
 import 'dart:convert';
-import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
 
 import 'package:http/http.dart' as http;
 
-import './loading_screen.dart';
-import './cash_advanced_particular.dart';
+import '../loading_screen.dart';
+import './liquidation_particular.dart';
 
-class CashAdvancedList extends StatefulWidget {
+class Liquidation extends StatefulWidget {
   @override
-  _CashAdvancedListState createState() => _CashAdvancedListState();
+  _Liquidation createState() => _Liquidation();
 }
 
-class _CashAdvancedListState extends State<CashAdvancedList> {
+class _Liquidation extends State<Liquidation> {
   List users = [];
 
   @override
@@ -47,9 +47,12 @@ class _CashAdvancedListState extends State<CashAdvancedList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Cash Advanced'),
+        title: Text('Liquidation'),
       ),
-      body: getBody(),
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        child: getBody(),
+      ),
     );
   }
 
@@ -101,8 +104,8 @@ class _CashAdvancedListState extends State<CashAdvancedList> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) =>
-                    CashAdvancedParticular(userImage, fullName, amountFiled),
+                builder: (context) => LiquidationParticular(
+                    userImage, fullName, amountFiled, dateString),
               ),
             );
           },

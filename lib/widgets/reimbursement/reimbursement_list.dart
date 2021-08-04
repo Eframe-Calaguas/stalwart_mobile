@@ -7,15 +7,15 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 
 import 'package:http/http.dart' as http;
 
-import './loading_screen.dart';
-import './liquidation_particular.dart';
+import '../loading_screen.dart';
+import './reimbursement_receipt.dart';
 
-class Liquidation extends StatefulWidget {
+class Reimbursement extends StatefulWidget {
   @override
-  _Liquidation createState() => _Liquidation();
+  _Reimbursement createState() => _Reimbursement();
 }
 
-class _Liquidation extends State<Liquidation> {
+class _Reimbursement extends State<Reimbursement> {
   List users = [];
 
   @override
@@ -47,9 +47,12 @@ class _Liquidation extends State<Liquidation> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Liquidation'),
+        title: Text('Reimbursement'),
       ),
-      body: getBody(),
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        child: getBody(),
+      ),
     );
   }
 
@@ -101,7 +104,7 @@ class _Liquidation extends State<Liquidation> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => LiquidationParticular(
+                builder: (context) => ReimbursementReceipt(
                     userImage, fullName, amountFiled, dateString),
               ),
             );
@@ -145,7 +148,7 @@ class _Liquidation extends State<Liquidation> {
                       Text(
                         dateString,
                         style: TextStyle(
-                          color: Color(0xFF515265),
+                          color: Colors.blue,
                           fontSize: 13,
                         ),
                       ),
