@@ -48,9 +48,9 @@ class LoginPage extends StatelessWidget {
             ),
             Column(children: [
               Container(
-                width: MediaQuery.of(context).size.width,
+                width: MediaQuery.of(context).size.width * 0.80,
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                  padding: EdgeInsets.symmetric(vertical: 20),
                   child: TextFormField(
                     validator: MultiValidator([
                       RequiredValidator(
@@ -79,41 +79,44 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 40, vertical: 5),
-                child: TextFormField(
-                  validator: MultiValidator(
-                    [
-                      RequiredValidator(errorText: "* Required"),
-                    ],
-                  ),
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30.0),
-                      borderSide: BorderSide(color: Colors.blue, width: 2),
+              Container(
+                width: MediaQuery.of(context).size.width * 0.80,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(vertical: 5),
+                  child: TextFormField(
+                    validator: MultiValidator(
+                      [
+                        RequiredValidator(errorText: "* Required"),
+                      ],
                     ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30.0),
-                      borderSide: BorderSide(color: Colors.blue, width: 2),
-                    ),
-                    hintText: 'Password',
-                    prefixIcon: Padding(
-                      padding: EdgeInsets.only(
-                          bottom: 4), // add padding to adjust icon
-                      child: Icon(
-                        Icons.lock,
-                        color: Colors.blue,
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30.0),
+                        borderSide: BorderSide(color: Colors.blue, width: 2),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30.0),
+                        borderSide: BorderSide(color: Colors.blue, width: 2),
+                      ),
+                      hintText: 'Password',
+                      prefixIcon: Padding(
+                        padding: EdgeInsets.only(
+                            bottom: 4), // add padding to adjust icon
+                        child: Icon(
+                          Icons.lock,
+                          color: Colors.blue,
+                        ),
                       ),
                     ),
+                    controller: passwordController,
                   ),
-                  controller: passwordController,
                 ),
               ),
               Container(
                 margin: EdgeInsets.only(top: 20),
                 child: SizedBox(
-                  width: 200,
+                  width: MediaQuery.of(context).size.width * 0.40,
                   height: 50,
                   child: ElevatedButton(
                     onPressed: () {
