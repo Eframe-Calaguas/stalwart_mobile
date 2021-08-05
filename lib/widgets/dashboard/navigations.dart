@@ -27,8 +27,8 @@ class Navigations extends StatelessWidget {
                 children: [
                   Container(
                     margin: EdgeInsets.only(top: 15, left: 10),
-                    child: const SizedBox(
-                      width: 190,
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width,
                       height: 50,
                       child: Text(
                         'Total Approved',
@@ -73,8 +73,8 @@ class Navigations extends StatelessWidget {
                 children: [
                   Container(
                     margin: EdgeInsets.only(top: 15, left: 10),
-                    child: const SizedBox(
-                      width: 190,
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width,
                       height: 50,
                       child: Text(
                         'Total Rejected',
@@ -126,6 +126,7 @@ class Navigations extends StatelessWidget {
                 child: Column(
                   children: [
                     Container(
+                      width: MediaQuery.of(context).size.width,
                       padding: EdgeInsets.all(20),
                       child: const SizedBox(
                         child: Icon(
@@ -172,6 +173,7 @@ class Navigations extends StatelessWidget {
               child: Column(
                 children: [
                   Container(
+                    width: MediaQuery.of(context).size.width,
                     padding: EdgeInsets.all(20),
                     child: const SizedBox(
                       child: Icon(
@@ -217,6 +219,7 @@ class Navigations extends StatelessWidget {
               child: Column(
                 children: [
                   Container(
+                    width: MediaQuery.of(context).size.width,
                     padding: EdgeInsets.all(20),
                     child: const SizedBox(
                       child: Icon(
@@ -262,6 +265,7 @@ class Navigations extends StatelessWidget {
               child: Column(
                 children: [
                   Container(
+                    width: MediaQuery.of(context).size.width,
                     padding: EdgeInsets.all(20),
                     child: const SizedBox(
                       child: Icon(

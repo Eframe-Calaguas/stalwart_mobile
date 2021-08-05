@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -57,22 +56,7 @@ class _LiquidationHistoryState extends State<LiquidationHistory> {
       return ListView.builder(
         itemCount: users.length,
         itemBuilder: (context, index) {
-          return Slidable(
-            child: getCard(users[index]),
-            actionPane: SlidableDrawerActionPane(),
-            secondaryActions: [
-              IconSlideAction(
-                caption: 'Approve',
-                color: Colors.blue,
-                icon: Icons.thumb_up_alt_rounded,
-              ),
-              IconSlideAction(
-                caption: 'Reject',
-                color: Colors.red,
-                icon: Icons.thumb_down_alt_rounded,
-              ),
-            ],
-          );
+          return getCard(users[index]);
         },
       );
     }

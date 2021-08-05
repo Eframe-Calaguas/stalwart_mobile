@@ -8,6 +8,7 @@ import './widgets/cash_advanced/cash_advanced_list.dart';
 import './widgets/liquidation/liquidation_list.dart';
 import './widgets/dashboard/dashboard.dart';
 import './widgets/dashboard/navigations.dart';
+import './widgets/user_profile/user_profile.dart';
 
 void main() {
   runApp(MyApp());
@@ -65,7 +66,12 @@ class HomePage extends StatelessWidget {
                 'USER PROFILE',
                 style: TextStyle(fontSize: 20),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => UserProfile()),
+                );
+              },
             ),
             ListTile(
               title: Text(
