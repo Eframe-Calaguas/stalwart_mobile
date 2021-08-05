@@ -4,7 +4,7 @@ class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 180,
+      height: 150,
       width: double.infinity,
       color: Colors.blue,
       child: Container(
@@ -20,7 +20,7 @@ class Dashboard extends StatelessWidget {
                     child: Text(
                       'Eframe Calaguas',
                       style: TextStyle(
-                          fontSize: 28.0,
+                          fontSize: 23.0,
                           fontWeight: FontWeight.bold,
                           color: Colors.white),
                     ),
@@ -29,7 +29,7 @@ class Dashboard extends StatelessWidget {
                     padding: EdgeInsets.zero,
                     child: Text(
                       'System Developer',
-                      style: TextStyle(fontSize: 20.0, color: Colors.white),
+                      style: TextStyle(fontSize: 16.0, color: Colors.white),
                     ),
                   ),
                 ],
@@ -40,11 +40,11 @@ class Dashboard extends StatelessWidget {
               child: Column(
                 children: [
                   CircleAvatar(
-                    radius: 70,
+                    radius: 65,
                     backgroundColor: Colors.white,
                     child: CircleAvatar(
                       backgroundImage: AssetImage('assets/face.png'),
-                      radius: 70,
+                      radius: 65,
                     ),
                   )
                 ],

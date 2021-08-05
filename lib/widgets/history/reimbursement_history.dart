@@ -70,6 +70,7 @@ class _ReimbursementHistoryState extends State<ReimbursementHistory> {
     var dateString = DateFormat.yMMMMd().format(DateTime.parse(dateFiled));
 
     return Container(
+      color: Colors.white,
       padding: EdgeInsets.all(2),
       child: Card(
         shape: RoundedRectangleBorder(
@@ -100,32 +101,37 @@ class _ReimbursementHistoryState extends State<ReimbursementHistory> {
                     ),
                   ),
                   SizedBox(
-                    width: 5,
+                    width: 20,
                   ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        fullName,
-                        style: TextStyle(
-                            color: Colors.blue,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        dateString,
-                        style: TextStyle(
-                          color: Color(0xFF515265),
-                          fontSize: 13,
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          fullName,
+                          style: TextStyle(
+                              color: Colors.blue,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          softWrap: false,
                         ),
-                      ),
-                    ],
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          dateString,
+                          style: TextStyle(
+                            color: Color(0xFF515265),
+                            fontSize: 13,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                   SizedBox(
-                    width: 40,
+                    width: 20,
                   ),
                   Row(
                     children: [
@@ -136,12 +142,12 @@ class _ReimbursementHistoryState extends State<ReimbursementHistory> {
                                 (Match m) => "${m[1]},"),
                         style: TextStyle(
                           color: Colors.blue,
-                          fontSize: 16,
+                          fontSize: 13,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                     ],
-                  )
+                  ),
                 ],
               ),
             ),

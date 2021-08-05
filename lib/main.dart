@@ -96,7 +96,8 @@ class HomePage extends StatelessWidget {
         ],
       ),
       bottomSheet: Container(
-        height: 85,
+        // height: 85,
+        height: MediaQuery.of(context).size.height * 0.11,
         width: double.infinity,
         decoration: BoxDecoration(
           image: DecorationImage(

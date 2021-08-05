@@ -49,7 +49,7 @@ class CashAdvancedParticular extends StatelessWidget {
                     fullName,
                     style: TextStyle(
                       color: Colors.blue,
-                      fontSize: 22,
+                      fontSize: 18,
                     ),
                   ),
                 ],
@@ -68,7 +68,7 @@ class CashAdvancedParticular extends StatelessWidget {
                           style: TextStyle(
                             color: Colors.blue,
                             fontWeight: FontWeight.bold,
-                            fontSize: 22,
+                            fontSize: 18,
                           ),
                         ),
                       ],
@@ -106,7 +106,7 @@ class CashAdvancedParticular extends StatelessWidget {
                           style: TextStyle(
                             color: Colors.blue,
                             fontWeight: FontWeight.bold,
-                            fontSize: 22,
+                            fontSize: 18,
                           ),
                         ),
                       ],
@@ -144,7 +144,7 @@ class CashAdvancedParticular extends StatelessWidget {
                           style: TextStyle(
                             color: Colors.blue,
                             fontWeight: FontWeight.bold,
-                            fontSize: 22,
+                            fontSize: 18,
                           ),
                         ),
                       ],
@@ -156,9 +156,10 @@ class CashAdvancedParticular extends StatelessWidget {
                       children: [
                         Flexible(
                           child: Text(
-                            amountFiled.toString().replaceAllMapped(
-                                new RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
-                                (Match m) => "${m[1]},"),
+                            'PHP ' +
+                                amountFiled.toString().replaceAllMapped(
+                                    new RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
+                                    (Match m) => "${m[1]},"),
                             style: TextStyle(
                               color: Color(0xFF515265),
                               fontSize: 18,

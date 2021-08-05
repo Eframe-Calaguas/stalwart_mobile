@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 
-import '../../main.dart';
+import '../user_profile/reset_success_page.dart';
 
 class ResetPassword extends StatelessWidget {
   final userController = TextEditingController();
@@ -33,7 +33,7 @@ class ResetPassword extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.blue,
                         fontWeight: FontWeight.bold,
-                        fontSize: 30,
+                        fontSize: 22,
                       ),
                     ),
                   ),
@@ -111,7 +111,7 @@ class ResetPassword extends StatelessWidget {
                               style: TextStyle(
                                 color: Colors.blue,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 30,
+                                fontSize: 22,
                               ),
                             ),
                           ],
@@ -203,29 +203,26 @@ class ResetPassword extends StatelessWidget {
                               if (_formKey.currentState!.validate()) {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
-                                    backgroundColor: Colors.white,
-                                    content: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Flexible(
-                                          child: Text(
-                                            'Successfully reset password, please re-login using your new password!',
+                                      backgroundColor: Colors.white,
+                                      content: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            'Successfully Login!',
                                             style: TextStyle(
                                               color: Colors.blue,
                                               fontWeight: FontWeight.bold,
                                               fontSize: 20,
                                             ),
                                           ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
+                                        ],
+                                      )),
                                 );
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => Login(),
+                                    builder: (context) => ResetSuccessPage(),
                                   ),
                                 );
                               }
