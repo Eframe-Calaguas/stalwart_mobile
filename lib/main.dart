@@ -9,6 +9,7 @@ import './widgets/liquidation/liquidation_list.dart';
 import './widgets/dashboard/dashboard.dart';
 import './widgets/dashboard/navigations.dart';
 import './widgets/user_profile/user_profile.dart';
+import './widgets/user_profile/reset_password.dart';
 
 void main() {
   runApp(MyApp());
@@ -140,5 +141,12 @@ class HistoryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return History();
+  }
+}
+
+class ResetPasswordPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ResetPassword();
   }
 }

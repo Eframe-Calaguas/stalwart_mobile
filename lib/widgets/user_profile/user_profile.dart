@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:stalwart_mobile/main.dart';
 
 class UserProfile extends StatelessWidget {
   @override
@@ -330,7 +331,13 @@ class UserProfile extends StatelessWidget {
                       Container(
                         width: MediaQuery.of(context).size.width * 0.80,
                         child: OutlinedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ResetPasswordPage()),
+                            );
+                          },
                           child: Text(
                             'Reset Password',
                             style: TextStyle(fontSize: 22),
