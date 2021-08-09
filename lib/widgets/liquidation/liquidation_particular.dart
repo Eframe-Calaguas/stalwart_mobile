@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
+import '../../main.dart';
 
 class LiquidationParticular extends StatelessWidget {
   final userImage;
@@ -291,6 +292,10 @@ class LiquidationParticular extends StatelessWidget {
                       ),
                       onPressed: () {
                         print('Approve');
+                        showDialog(
+                          context: context,
+                          builder: (context) => ApproveModal(),
+                        );
                       },
                       child: Container(
                         padding: EdgeInsets.all(15),
@@ -316,6 +321,10 @@ class LiquidationParticular extends StatelessWidget {
                       ),
                       onPressed: () {
                         print('Reject');
+                        showDialog(
+                          context: context,
+                          builder: (context) => RejectModal(),
+                        );
                       },
                       child: Container(
                         padding: EdgeInsets.all(15),

@@ -10,6 +10,7 @@ class ResetPassword extends StatelessWidget {
   final passwordController = TextEditingController();
 
   final _formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,36 +22,31 @@ class ResetPassword extends StatelessWidget {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.05,
               ),
-              Container(
-                  child: Row(
+              Row(
                 children: [
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.09,
                   ),
-                  Flexible(
-                    child: Text(
-                      'Create New Password',
-                      style: TextStyle(
-                        color: Colors.blue,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 22,
-                      ),
+                  Text(
+                    'Create New Password',
+                    style: TextStyle(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 22,
                     ),
                   ),
                 ],
-              )),
+              ),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.01,
               ),
               Container(
                 width: MediaQuery.of(context).size.width * 0.80,
-                child: Flexible(
-                  child: Text(
-                    'Your new password must be different from your previous passwords.',
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontSize: 16,
-                    ),
+                child: Text(
+                  'Your new password must be different from your previous passwords.',
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 16,
                   ),
                 ),
               ),
@@ -203,27 +199,27 @@ class ResetPassword extends StatelessWidget {
                               if (_formKey.currentState!.validate()) {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
-                                      backgroundColor: Colors.white,
-                                      content: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            'Successfully Login!',
-                                            style: TextStyle(
-                                              color: Colors.blue,
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 20,
-                                            ),
+                                    backgroundColor: Colors.white,
+                                    content: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          '',
+                                          style: TextStyle(
+                                            color: Colors.blue,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 20,
                                           ),
-                                        ],
-                                      )),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
                                 );
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => ResetSuccessPage(),
-                                  ),
+                                      builder: (context) => ResetSuccessPage()),
                                 );
                               }
                             },
@@ -237,7 +233,7 @@ class ResetPassword extends StatelessWidget {
                             ),
                           ),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
