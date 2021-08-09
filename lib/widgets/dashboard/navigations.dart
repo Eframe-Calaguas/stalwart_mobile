@@ -11,7 +11,7 @@ class Navigations extends StatelessWidget {
         shrinkWrap: true,
         crossAxisCount: 2,
         childAspectRatio: (1 / .7),
-        children: <Widget>[
+        children: [
           Card(
             color: Color(0xFF01CBCB),
             elevation: 3,
@@ -29,13 +29,13 @@ class Navigations extends StatelessWidget {
                     margin: EdgeInsets.only(top: 15, left: 10),
                     child: SizedBox(
                       width: MediaQuery.of(context).size.width,
-                      height: 50,
+                      height: MediaQuery.of(context).size.height * 0.07,
                       child: Text(
                         'Total Approved',
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
-                            fontSize: 20),
+                            fontSize: 18),
                       ),
                     ),
                   ),
@@ -49,7 +49,7 @@ class Navigations extends StatelessWidget {
                     child: Text(
                       '90',
                       style: TextStyle(
-                        fontSize: 30,
+                        fontSize: 25,
                         color: Colors.black,
                       ),
                     ),
@@ -75,13 +75,13 @@ class Navigations extends StatelessWidget {
                     margin: EdgeInsets.only(top: 15, left: 10),
                     child: SizedBox(
                       width: MediaQuery.of(context).size.width,
-                      height: 50,
+                      height: MediaQuery.of(context).size.height * 0.07,
                       child: Text(
                         'Total Rejected',
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
-                            fontSize: 20),
+                            fontSize: 18),
                       ),
                     ),
                   ),
@@ -95,7 +95,7 @@ class Navigations extends StatelessWidget {
                     child: Text(
                       '20',
                       style: TextStyle(
-                        fontSize: 30,
+                        fontSize: 25,
                         color: Colors.black,
                       ),
                     ),
@@ -105,7 +105,7 @@ class Navigations extends StatelessWidget {
             ),
           ),
           Container(
-            height: 50,
+            height: MediaQuery.of(context).size.height * 0.07,
             child: Card(
               color: Colors.white,
               elevation: 3,
@@ -131,7 +131,7 @@ class Navigations extends StatelessWidget {
                       child: const SizedBox(
                         child: Icon(
                           Icons.payments_outlined,
-                          size: 50,
+                          size: 40,
                           color: Colors.blue,
                         ),
                       ),
@@ -144,7 +144,7 @@ class Navigations extends StatelessWidget {
                             style: TextStyle(
                                 color: Colors.blue,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 20),
+                                fontSize: 18),
                           ),
                         )
                       ],
@@ -178,7 +178,7 @@ class Navigations extends StatelessWidget {
                     child: const SizedBox(
                       child: Icon(
                         Icons.receipt_long_outlined,
-                        size: 50,
+                        size: 40,
                         color: Colors.blue,
                       ),
                     ),
@@ -191,7 +191,7 @@ class Navigations extends StatelessWidget {
                           style: TextStyle(
                               color: Colors.blue,
                               fontWeight: FontWeight.bold,
-                              fontSize: 20),
+                              fontSize: 18),
                         ),
                       )
                     ],
@@ -224,7 +224,7 @@ class Navigations extends StatelessWidget {
                     child: const SizedBox(
                       child: Icon(
                         Icons.request_quote_outlined,
-                        size: 50,
+                        size: 40,
                         color: Colors.blue,
                       ),
                     ),
@@ -237,7 +237,7 @@ class Navigations extends StatelessWidget {
                           style: TextStyle(
                               color: Colors.blue,
                               fontWeight: FontWeight.bold,
-                              fontSize: 20),
+                              fontSize: 18),
                         ),
                       )
                     ],
@@ -270,7 +270,7 @@ class Navigations extends StatelessWidget {
                     child: const SizedBox(
                       child: Icon(
                         Icons.history_outlined,
-                        size: 50,
+                        size: 40,
                         color: Colors.blue,
                       ),
                     ),
@@ -283,7 +283,7 @@ class Navigations extends StatelessWidget {
                           style: TextStyle(
                               color: Colors.blue,
                               fontWeight: FontWeight.bold,
-                              fontSize: 20),
+                              fontSize: 18),
                         ),
                       )
                     ],

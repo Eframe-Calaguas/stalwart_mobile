@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:stalwart_mobile/main.dart';
 
 class UserProfile extends StatelessWidget {
   @override
@@ -24,7 +25,7 @@ class UserProfile extends StatelessWidget {
                       child: Column(
                         children: [
                           SizedBox(
-                            height: 20,
+                            height: 10,
                           ),
                           CircleAvatar(
                             radius: 70,
@@ -84,7 +85,7 @@ class UserProfile extends StatelessWidget {
                         'Company I.D',
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 22,
+                          fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -126,7 +127,7 @@ class UserProfile extends StatelessWidget {
                         'Branch Name',
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 22,
+                          fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -168,7 +169,7 @@ class UserProfile extends StatelessWidget {
                         'Department',
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 22,
+                          fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -210,7 +211,7 @@ class UserProfile extends StatelessWidget {
                         'Sub-Department',
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 22,
+                          fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -252,7 +253,7 @@ class UserProfile extends StatelessWidget {
                         'Role',
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 22,
+                          fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -294,7 +295,7 @@ class UserProfile extends StatelessWidget {
                         'Username',
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 22,
+                          fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -330,10 +331,16 @@ class UserProfile extends StatelessWidget {
                       Container(
                         width: MediaQuery.of(context).size.width * 0.80,
                         child: OutlinedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ResetPasswordPage()),
+                            );
+                          },
                           child: Text(
                             'Reset Password',
-                            style: TextStyle(fontSize: 22),
+                            style: TextStyle(fontSize: 18),
                           ),
                           style: ElevatedButton.styleFrom(
                             side: BorderSide(width: 2.0, color: Colors.blue),

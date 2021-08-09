@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
+import '../../main.dart';
 
 class ReimbursementParticular extends StatelessWidget {
   final userImage;
@@ -53,7 +54,7 @@ class ReimbursementParticular extends StatelessWidget {
                       fullName,
                       style: TextStyle(
                         color: Colors.blue,
-                        fontSize: 22,
+                        fontSize: 18,
                       ),
                     ),
                   ],
@@ -72,7 +73,7 @@ class ReimbursementParticular extends StatelessWidget {
                           style: TextStyle(
                             color: Colors.blue,
                             fontWeight: FontWeight.bold,
-                            fontSize: 22,
+                            fontSize: 18,
                           ),
                         ),
                         Text(
@@ -95,7 +96,7 @@ class ReimbursementParticular extends StatelessWidget {
                           style: TextStyle(
                             color: Colors.blue,
                             fontWeight: FontWeight.bold,
-                            fontSize: 22,
+                            fontSize: 18,
                           ),
                         ),
                         Text(
@@ -123,7 +124,7 @@ class ReimbursementParticular extends StatelessWidget {
                           style: TextStyle(
                             color: Colors.blue,
                             fontWeight: FontWeight.bold,
-                            fontSize: 22,
+                            fontSize: 18,
                           ),
                         ),
                         Text(
@@ -146,13 +147,14 @@ class ReimbursementParticular extends StatelessWidget {
                           style: TextStyle(
                             color: Colors.blue,
                             fontWeight: FontWeight.bold,
-                            fontSize: 22,
+                            fontSize: 18,
                           ),
                         ),
                         Text(
-                          amountFiled.toString().replaceAllMapped(
-                              new RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
-                              (Match m) => "${m[1]},"),
+                          'PHP ' +
+                              amountFiled.toString().replaceAllMapped(
+                                  new RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
+                                  (Match m) => "${m[1]},"),
                           style: TextStyle(
                             color: Color(0xFF515265),
                             fontSize: 18,
@@ -176,7 +178,7 @@ class ReimbursementParticular extends StatelessWidget {
                           style: TextStyle(
                             color: Colors.blue,
                             fontWeight: FontWeight.bold,
-                            fontSize: 22,
+                            fontSize: 18,
                           ),
                         ),
                         Text(
@@ -199,7 +201,7 @@ class ReimbursementParticular extends StatelessWidget {
                           style: TextStyle(
                             color: Colors.blue,
                             fontWeight: FontWeight.bold,
-                            fontSize: 22,
+                            fontSize: 18,
                           ),
                         ),
                         Text(
@@ -228,7 +230,7 @@ class ReimbursementParticular extends StatelessWidget {
                             style: TextStyle(
                               color: Colors.blue,
                               fontWeight: FontWeight.bold,
-                              fontSize: 22,
+                              fontSize: 18,
                             ),
                           ),
                           Text(
@@ -258,7 +260,7 @@ class ReimbursementParticular extends StatelessWidget {
                             style: TextStyle(
                               color: Colors.blue,
                               fontWeight: FontWeight.bold,
-                              fontSize: 22,
+                              fontSize: 18,
                             ),
                           ),
                           Text(
@@ -290,6 +292,10 @@ class ReimbursementParticular extends StatelessWidget {
                       ),
                       onPressed: () {
                         print('Approve');
+                        showDialog(
+                          context: context,
+                          builder: (context) => ApproveModal(),
+                        );
                       },
                       child: Container(
                         padding: EdgeInsets.all(15),
@@ -315,6 +321,10 @@ class ReimbursementParticular extends StatelessWidget {
                       ),
                       onPressed: () {
                         print('Reject');
+                        showDialog(
+                          context: context,
+                          builder: (context) => RejectModal(),
+                        );
                       },
                       child: Container(
                         padding: EdgeInsets.all(15),
